@@ -8,5 +8,10 @@
     "file": "/post/secret.txt",
     "title": "Secret Post",
     "password": "mypassword"
+  },
+    {
+    "file": "/sastra/adrenalin.txt",
+    "title": "Azmen Melaju Tiba-tiba",
+    "password": "adrenalin"
   }
 ]
