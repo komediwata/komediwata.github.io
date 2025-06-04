@@ -1,16 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simple TXT Blog</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Bio Site</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button class="toggle-btn" onclick="toggleNight()">🌙 Toggle Night Mode</button>
-  <div id="post-list"></div>
-  <pre id="post-content"></pre>
-  <script src="script.js"></script>
+<button onclick="toggleNight()" id="night-toggle">Toggle Night Mode</button>
+<div id="content">
+  <div id="bio">
+    <h1>Hi, I'm Your Name</h1>
+    <p>Welcome to my personal page. I am a developer, writer, and creator.</p>
+    <ul>
+      <li><a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="mailto:youremail@example.com">Email Me</a></li>
+      <li><a href="https://yourblog.example.com" target="_blank" rel="noopener">My Blog</a></li>
+    </ul>
+  </div>
+  <pre id="post-content" style="display:none;"></pre>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

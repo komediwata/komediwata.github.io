@@ -1,27 +1,36 @@
-
 body {
   font-family: Consolas, monospace;
   background: white;
   color: black;
-  padding: 1rem;
+  margin: 2em;
   transition: background 0.3s, color 0.3s;
 }
-.night {
-  background: #111;
+body.night {
+  background: #121212;
   color: #eee;
 }
-.toggle-btn {
+#night-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
-  margin-bottom: 1rem;
 }
-.post-link {
-  display: block;
-  margin: 0.5rem 0;
-  cursor: pointer;
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
   text-decoration: underline;
 }
-pre {
+#post-content {
   white-space: pre-wrap;
-  word-wrap: break-word;
-  margin-top: 1rem;
+  background: #f0f0f0;
+  padding: 1em;
+  border-radius: 8px;
+  margin-top: 2em;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+body.night #post-content {
+  background: #222;
 }

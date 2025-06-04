@@ -1,12 +1,12 @@
 [
   {
-    "file": "posts/post1.txt",
-    "title": "Post 1",
+    "file": "post/welcome.txt",
+    "title": "Welcome",
     "password": null
   },
   {
-    "file": "posts/secret.txt",
+    "file": "post/secret.txt",
     "title": "Secret Post",
-    "password": "1234"
+    "password": "mypassword"
   }
 ]
