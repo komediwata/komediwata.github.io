@@ -1,0 +1,27 @@
+
+body {
+  font-family: Consolas, monospace;
+  background: white;
+  color: black;
+  padding: 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+.night {
+  background: #111;
+  color: #eee;
+}
+.toggle-btn {
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.post-link {
+  display: block;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-top: 1rem;
+}
