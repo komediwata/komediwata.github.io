@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
       fetch('config.json')
         .then(res => res.json())
         .then(posts => {
-          const path = `${folder}/${filename}`;
+          const path = `/${folder}/${filename}`;
           const post = posts.find(p => p.file === path);
           if (!post) {
             alert('memang takde atau telah dipadam');
