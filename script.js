@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
       })
       .then(txt => {
         bio.style.display = 'none';
-        postContent.style.display = 'block';
+        /*postContent.style.display = 'block';*/
         postContent.textContent = txt;
       })
       .catch(() => {
