@@ -1,6 +1,7 @@
 /* Reset everything */
 * {
   margin: 0;
+  margin-top: 2rem;
   padding: 0;
   box-sizing: border-box;
 }
