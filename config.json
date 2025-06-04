@@ -1,22 +1,22 @@
 [
   {
-    "file": "/post/welcome.txt",
+    "file": "post/welcome.txt",
     "title": "Welcome",
     "password": null
   },
   {
-    "file": "/post/secret.txt",
+    "file": "post/secret.txt",
     "title": "Secret Post",
     "password": "mypassword"
   },
     {
-    "file": "/sastra/adrenalin.txt",
+    "file": "sastra/adrenalin.txt",
     "title": "Azmen Melaju Tiba-tiba",
     "password": "adrenalin"
     "tag": "sastra"
   },
     {
-    "file": "/post/bank-in.txt",
+    "file": "post/bank-in.txt",
     "title": "demi sastra",
     "password": null
     "tag": "post"
