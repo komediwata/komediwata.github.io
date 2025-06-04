@@ -7,6 +7,7 @@ body {
   color: black;
   box-shadow: none;
   outline: none;
+  line-height: 1.4;
 }
 body.night {
   background: #121212;
