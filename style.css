@@ -34,3 +34,13 @@ a:hover {
 body.night #post-content {
   background: #222;
 }
+#post-content {
+  font-family: Consolas, monospace;
+  font-size: 1em;
+  color: inherit;
+  background: transparent; /* or remove entirely */
+  border: none;
+  padding: 1em;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
