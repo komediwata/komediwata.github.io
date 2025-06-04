@@ -1,12 +1,19 @@
-body {
+/* Reset everything */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove spacing from html/body */
+html, body {
+  width: 100%;
+  height: 100%;
   font-family: Consolas, monospace;
-  font-size: 14px;
-  white-space: pre-wrap;
-  background: none;
-  border: none;
+  background: white;
   color: black;
-  box-shadow: none;
-  outline: none;
+  line-height: 1;
+  overflow: hidden; /* optional: removes scrollbars */
 }
 
 #bio {
