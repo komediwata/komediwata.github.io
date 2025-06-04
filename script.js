@@ -1,6 +1,6 @@
-window.toggleNight = function() {
+function toggleNight() {
   document.body.classList.toggle('night');
-};
+}
 
 window.addEventListener('DOMContentLoaded', () => {
   const postContent = document.getElementById('post-content');
