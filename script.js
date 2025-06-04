@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
     fetch('config.json')
       .then(res => res.json())
       .then(posts => {
-        const post = posts.find(p => p.file === 'post/' + filename);
+        const post = posts.find(p => p.file === '/post/' + filename);
         if (!post) {
           alert('Post not found.');
           return;
