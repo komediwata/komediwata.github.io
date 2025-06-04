@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (post.password) {
       const input = prompt("Enter password:");
       if (input !== post.password) {
-        alert("Incorrect password.");
+        alert("haha salah.");
         return;
       }
     }
@@ -39,15 +39,25 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function handleHash() {
     const hash = window.location.hash;
-    if (hash.startsWith('#post=')) {
-      const filename = decodeURIComponent(hash.slice(6));
+    let folder = null;
+    let filename = null;
 
+    if (hash.startsWith('#post=')) {
+      folder = 'post';
+      filename = decodeURIComponent(hash.slice(6));
+    } else if (hash.startsWith('#sastra=')) {
+      folder = 'sastra';
+      filename = decodeURIComponent(hash.slice(8));
+    }
+
+    if (folder && filename) {
       fetch('config.json')
         .then(res => res.json())
         .then(posts => {
-          const post = posts.find(p => p.file.endsWith('/' + filename));
+          const path = `${folder}/${filename}`;
+          const post = posts.find(p => p.file === path);
           if (!post) {
-            alert('Post not found.');
+            alert('memang takde atau telah dipadam');
             return;
           }
           loadPost(post);
