@@ -9,6 +9,13 @@ body {
   outline: none;
   line-height: 1.4;
 }
+
+#bio {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
 body.night {
   background: #121212;
   color: #eee;
