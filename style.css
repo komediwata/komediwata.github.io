@@ -24,7 +24,7 @@ a:hover {
 }
 #post-content {
   white-space: pre-wrap;
-  background: #f0f0f0;
+  /**background: #f0f0f0;**/
   padding: 1em;
   border-radius: 8px;
   margin-top: 2em;
@@ -33,14 +33,4 @@ a:hover {
 }
 body.night #post-content {
   background: #222;
-}
-#post-content {
-  font-family: Consolas, monospace;
-  font-size: 1em;
-  color: inherit;
-  background: transparent; /* or remove entirely */
-  border: none;
-  padding: 1em;
-  white-space: pre-wrap;
-  word-break: break-word;
 }
