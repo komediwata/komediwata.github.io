@@ -1,0 +1,12 @@
+[
+  {
+    "file": "posts/post1.txt",
+    "title": "Post 1",
+    "password": null
+  },
+  {
+    "file": "posts/secret.txt",
+    "title": "Secret Post",
+    "password": "1234"
+  }
+]

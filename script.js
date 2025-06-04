@@ -1,19 +1,6 @@
 
-const posts = [
-  { file: 'posts/post1.txt', title: 'Post 1', password: null },
-  { file: 'posts/secret.txt', title: 'Secret Post', password: '1234' }
-];
-
 const postList = document.getElementById('post-list');
 const content = document.getElementById('post-content');
-
-posts.forEach(post => {
-  const link = document.createElement('div');
-  link.textContent = post.title;
-  link.className = 'post-link';
-  link.onclick = () => loadPost(post);
-  postList.appendChild(link);
-});
 
 function toggleNight() {
   document.body.classList.toggle('night');
@@ -32,3 +19,15 @@ function loadPost(post) {
     .then(txt => content.textContent = txt)
     .catch(() => content.textContent = 'Error loading post.');
 }
+
+fetch("config.json")
+  .then(res => res.json())
+  .then(posts => {
+    posts.forEach(post => {
+      const link = document.createElement("div");
+      link.textContent = post.title;
+      link.className = "post-link";
+      link.onclick = () => loadPost(post);
+      postList.appendChild(link);
+    });
+  });
