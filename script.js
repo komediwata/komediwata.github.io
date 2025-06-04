@@ -19,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
         return;
       }
     }
+
     fetch(post.file)
       .then(res => {
         if (!res.ok) throw new Error('Failed to load post.');
@@ -36,19 +37,30 @@ window.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  const hash = window.location.hash;
-  if (hash.startsWith('#post=')) {
-    const filename = decodeURIComponent(hash.slice(6));
-    fetch('config.json')
-      .then(res => res.json())
-      .then(posts => {
-        const post = posts.find(p => p.file === '/post/' + filename);
-        if (!post) {
-          alert('Post not found.');
-          return;
-        }
-        loadPost(post);
-      })
-      .catch(() => alert('Error loading config.'));
+  function handleHash() {
+    const hash = window.location.hash;
+    if (hash.startsWith('#post=')) {
+      const filename = decodeURIComponent(hash.slice(6));
+
+      fetch('config.json')
+        .then(res => res.json())
+        .then(posts => {
+          const post = posts.find(p => p.file.endsWith('/' + filename));
+          if (!post) {
+            alert('Post not found.');
+            return;
+          }
+          loadPost(post);
+        })
+        .catch(() => alert('Error loading config.'));
+    } else {
+      // Show bio if no post selected
+      bio.style.display = 'block';
+      postContent.style.display = 'none';
+    }
   }
+
+  // Run once and on hash change
+  handleHash();
+  window.addEventListener('hashchange', handleHash);
 });
