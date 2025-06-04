@@ -1,10 +1,11 @@
-function toggleNight() {
-  document.body.classList.toggle('night');
-}
-
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   const postContent = document.getElementById('post-content');
   const bio = document.getElementById('bio');
+
+  if (!postContent || !bio) {
+    console.error('Required DOM elements not found!');
+    return;
+  }
 
   function loadPost(post) {
     if (post.password) {
@@ -31,14 +32,13 @@ window.addEventListener('load', () => {
       });
   }
 
-  // Read hash param
   const hash = window.location.hash;
   if (hash.startsWith('#post=')) {
     const filename = decodeURIComponent(hash.slice(6));
     fetch('config.json')
       .then(res => res.json())
       .then(posts => {
-        const post = posts.find(p => p.file.endsWith(filename));
+        const post = posts.find(p => p.file === 'post/' + filename);
         if (!post) {
           alert('Post not found.');
           return;
