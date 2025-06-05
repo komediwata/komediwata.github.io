@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
       .then(txt => {
         bio.style.display = 'none';
         postContent.style.display = 'block';
-        postContent.textContent = txt;
+        postContent.innerHTML = `<pre>${txt}</pre>`;
       })
       .catch(() => {
         bio.style.display = 'block';
