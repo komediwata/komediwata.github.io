@@ -63,14 +63,32 @@ a:hover {
 }
 
   
-@media (max-width: 500px) {
+@media (max-width: 767px) { /*fon */
   #post-content {
-    font-size: 26px;
-    padding: 0.4em;
-    max-width: 50%;
-    line-height: 1;
+    font-size: 18px;
+    padding: 0.5em;
+    width: 50%;
+    background: black;
   }
 }
+
+
+@media (min-width: 768px) { /*ipad */
+  #post-content {
+    font-size: 26px;
+    width: 50%;
+    background: red;
+
+  }
+  
+@media (min-width: 1024px) { /*laptop */
+  #post-content {
+    font-size: 26px;
+    padding: 0.5em;
+    width: 33.33%;
+    background: blue;
+  } 
+} 
 
 
 
