@@ -18,6 +18,7 @@ html, body {
 
 #bio {
   margin: 0;
+  margin-left: 2;
   margin-top: 2rem;
   padding: 0;
 }
