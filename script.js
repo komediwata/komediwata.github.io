@@ -28,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
       .then(txt => {
         bio.style.display = 'none';
         postContent.style.display = 'block';
+        document.getElementById('site-name-top').style.display = 'block';
         document.getElementById('post-title').textContent = post.title || '';
         postContent.textContent = txt;
         
