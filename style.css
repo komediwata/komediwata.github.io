@@ -62,9 +62,10 @@ a:hover {
   margin-bottom: 38rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   #post-content {
-    width: 45vw;
+    padding: 0.7em;
+    width: 45%;
   }
 }
 
