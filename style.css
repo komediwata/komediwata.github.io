@@ -49,12 +49,11 @@ a:hover {
   background: white; /* or any background */
 }
 
-#post-content {
+#post-content pre {
   flex: 2; /* 2/3 */
   padding: 1em;
   white-space: pre-wrap;
   font-size: 27px;
-  max-width: 33.33%; /* text block takes only 1/3 inside right 2/3 */
   overflow-y: hidden;
   color: black;
   margin-top: 1.5rem;
