@@ -1,3 +1,15 @@
+#site-name a {
+  color: inherit;         /* same color as heading */
+  text-decoration: none;  /* remove underline */
+   transition: all 0.2s ease; 
+}
+
+#site-name a:hover {
+ /* show underline on hover */
+  font-size: 38px;
+  
+}
+
 /* Reset everything */
 * {
   margin: 0;
