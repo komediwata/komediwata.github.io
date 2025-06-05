@@ -10,6 +10,7 @@
   
 }
 
+
 /* Reset everything */
 * {
   margin: 0;
@@ -78,22 +79,47 @@ a:hover {
   
 @media (max-width: 767px) { /*fon */
   #post-content {
-    font-size: 18px;
+    font-size: 1.125em;
     padding: 0.5em;
     width: 50%;
   }
+  
+  #site-name-top a {
+  font-size: 1.125em;
+  color: inherit;         /* same color as heading */
+  text-decoration: none;  /* remove underline */
+  transition: all 0.2s ease; 
+}
+  #site-name-top a:hover {
+  font-size: 1.125empx;
+  
+}
+  
 }
 
 
 @media (min-width: 768px) { /*ipad */
   #post-content {
-    font-size: 22px;
+    font-size: 1.325empx;
     width: 50%;
+
+}
+
+  #site-name-top a {
+  font-size: 1.325em;
+  color: inherit;         /* same color as heading */
+  text-decoration: none;  /* remove underline */
+  transition: all 0.2s ease; 
+}
+  #site-name-top a:hover {
+  font-size: 1.325empx;
+  
+}
   }
   
 @media (min-width: 1024px) { /*laptop */
   #post-content {
-    font-size: 26px;
+    font-size: 1.625em;
     padding: 0.5em;
     width: 33.33%;
   } 
