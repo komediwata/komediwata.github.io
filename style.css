@@ -13,7 +13,7 @@ html, body {
   background: white;
   color: black;
   line-height: 1.4;
-  overflow: visible; /* optional: removes scrollbars */
+  overflow: auto; /* optional: removes scrollbars */
 }
 
 #bio {
