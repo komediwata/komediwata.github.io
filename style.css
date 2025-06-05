@@ -54,7 +54,7 @@ a:hover {
   padding: 1em;
   white-space: pre-wrap;
   font-size: 27px;
-  line-height: 1px;
+  line-height: 1;
   overflow-y: hidden;
   color: black;
   margin-top: 1.5rem;
@@ -68,7 +68,6 @@ a:hover {
     font-size: 18px;
     padding: 0.5em;
     width: 50%;
-    background: black;
   }
 }
 
@@ -77,8 +76,6 @@ a:hover {
   #post-content {
     font-size: 26px;
     width: 50%;
-    background: red;
-
   }
   
 @media (min-width: 1024px) { /*laptop */
@@ -86,7 +83,6 @@ a:hover {
     font-size: 26px;
     padding: 0.5em;
     width: 33.33%;
-    background: blue;
   } 
 } 
 
