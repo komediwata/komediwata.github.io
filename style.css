@@ -76,6 +76,13 @@ a:hover {
   margin-bottom: 38rem;
 }
 
+#post-body {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
+}
   
 @media (max-width: 767px) { /*fon */
   #post-content {
