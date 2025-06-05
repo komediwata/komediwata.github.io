@@ -62,12 +62,19 @@ a:hover {
   margin-bottom: 38rem;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 1024px) {
+  #post-content {
+    max-width: 33.33%;
+  }
+  
+@media (min-width: 768px) {
   #post-content {
     padding: 0.7em;
     width: 45%;
   }
 }
+
+
 
 body.night #post-content {
   background: #222;
