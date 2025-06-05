@@ -91,7 +91,7 @@ a:hover {
   transition: all 0.2s ease; 
 }
   #site-name-top a:hover {
-  font-size: 1.125empx;
+  font-size: 1.125em;
   
 }
   
@@ -100,7 +100,7 @@ a:hover {
 
 @media (min-width: 768px) { /*ipad */
   #post-content {
-    font-size: 1.325empx;
+    font-size: 1.325em;
     width: 50%;
 
 }
@@ -112,7 +112,7 @@ a:hover {
   transition: all 0.2s ease; 
 }
   #site-name-top a:hover {
-  font-size: 1.325empx;
+  font-size: 1.325em;
   
 }
   }
