@@ -67,10 +67,11 @@ a:hover {
     max-width: 33.33%;
   }
   
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   #post-content {
-    padding: 0.7em;
-    width: 45%;
+    font-size: 18px;
+    padding: 0.4em;
+    max-width: 48%;
   }
 }
 
