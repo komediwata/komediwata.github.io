@@ -65,7 +65,7 @@ a:hover {
   
 @media (max-width: 767px) { /*fon */
   #post-content {
-    font-size: 18px;
+    font-size: 26px;
     padding: 0.5em;
     width: 50%;
   }
