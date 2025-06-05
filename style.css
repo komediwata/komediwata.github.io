@@ -72,6 +72,8 @@ a:hover {
     font-size: 26px;
     padding: 0.4em;
     max-width: 49.5%;
+    background: black;
+    font-color: white;
   }
 }
 
