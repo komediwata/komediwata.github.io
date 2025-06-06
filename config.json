@@ -1,8 +1,15 @@
 [
-    {
+
+  {
     "file": "post/welcome.txt",
     "title": "Welcome",
-  },    
+    "password": null
+  },
+  {
+    "file": "/post/secret.txt",
+    "title": "Secret Post",
+    "password": "mypassword"
+  },
     {
     "file": "/sastra/adrenalin.txt",
     "title": "Azmen Melaju Tiba-tiba",
@@ -11,5 +18,6 @@
     {
     "file": "/post/bank-in.txt",
     "title": "demi sastra",
+    "password": null
   }
 ]
