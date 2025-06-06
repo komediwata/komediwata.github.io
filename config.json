@@ -1,5 +1,9 @@
 [
     {
+    "file": "post/welcome.txt",
+    "title": "Welcome",
+  },    
+    {
     "file": "/sastra/adrenalin.txt",
     "title": "Azmen Melaju Tiba-tiba",
     "password": "adrenalin"
