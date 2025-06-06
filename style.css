@@ -1,21 +1,32 @@
 #site-name a {
   color: inherit;         /* same color as heading */
   text-decoration: none;  /* remove underline */
-   transition: all 0.2s ease; 
 }
 
 #site-name a:hover {
- /* show underline on hover */
   font-size: 38px;
-  
+  transition: all 0.5s ease; 
+  font-style: inherit;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  
+}
+/* bank in */
+a:hover {
+  font-size: 18px;
+  font-style: italic;
+  transition: all 1s ease;
+}
 
-/* Reset everything */
+/* Reset everything */ 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 /* Remove spacing from html/body */
@@ -42,13 +53,6 @@ body.night {
   color: #eee;
 }
 
-a {
-  color: #0066cc;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
 #container {
   display: flex;
   height: 100vh;
@@ -156,8 +160,8 @@ body.night #site-name-top a {
   color: #eee;
 }
 
-#post-content, #site-name-top  {
-  transition: background 1.5s, color 1.5s;
+#post-content, #site-name-top, #body, #site-name, p, a, body  {
+  transition: background 1s, color 1s;
 }
 }
 
