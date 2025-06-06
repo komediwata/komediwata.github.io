@@ -41,12 +41,7 @@ body.night {
   background: black;
   color: #eee;
 }
-#night-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
+
 a {
   color: #0066cc;
   text-decoration: none;
@@ -135,8 +130,8 @@ a:hover {
 
 #night-toggle {
   position: fixed;
-  top: 40rem;
-  right: 1.5rem;
+  bottom: 10px;
+  right: 0.5rem;
   background: none;
   border: none;
   font-size: 24px;
