@@ -1,23 +1,25 @@
-// tukar tema
-const nightToggle = document.getElementById('night-toggle');
-const nightIcon = document.getElementById('night-icon');
+document.addEventListener('DOMContentLoaded', () => {
+  const nightToggle = document.getElementById('night-toggle');
+  const nightIcon = document.getElementById('night-icon');
 
-nightToggle.addEventListener('click', () => {
-  const isNightNow = document.body.classList.toggle('night');
-  localStorage.setItem('nightMode', isNightNow);
-
-  nightIcon.src = isNightNow ? 'icon/matahari.svg' : 'icon/bulan.svg';
-  nightIcon.alt = isNightNow ? 'mode siang' : 'mode malam';
-});
-
-// awal tema
-window.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('nightMode') === 'true';
-  if (saved) {
+  // Initialize state from localStorage
+  const isNight = localStorage.getItem('nightMode') === 'true';
+  if (isNight) {
     document.body.classList.add('night');
-    document.getElementById('night-icon').src = 'icon/matahari.svg';
-    document.getElementById('night-icon').alt = 'mode siang';
+    nightIcon.src = 'icon/matahari.svg';
+    nightIcon.alt = 'Light mode';
+  } else {
+    nightIcon.src = 'icon/bulan.svg';
+    nightIcon.alt = 'Dark mode';
   }
+
+  // Toggle night mode and icon
+  nightToggle.addEventListener('click', () => {
+    const isNightNow = document.body.classList.toggle('night');
+    localStorage.setItem('nightMode', isNightNow);
+    nightIcon.src = isNightNow ? 'icon/matahari.svg' : 'icon/bulan.svg';
+    nightIcon.alt = isNightNow ? 'Light mode' : 'Dark mode';
+  });
 });
 
 window.addEventListener('DOMContentLoaded', () => {
