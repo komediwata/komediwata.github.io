@@ -2,22 +2,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const nightToggle = document.getElementById('night-toggle');
   const nightIcon = document.getElementById('night-icon');
 
-  // Initialize state from localStorage
+  // Read saved preference; default is false (light mode)
   const isNight = localStorage.getItem('nightMode') === 'true';
+
+  // pemula tema
   if (isNight) {
     document.body.classList.add('night');
-    nightIcon.src = 'icon/matahari.svg';
+    nightIcon.src = 'icons/sun.svg';
     nightIcon.alt = 'Light mode';
   } else {
-    nightIcon.src = 'icon/bulan.svg';
+    document.body.classList.remove('night');
+    nightIcon.src = 'icons/moon.svg';
     nightIcon.alt = 'Dark mode';
   }
 
-  // Toggle night mode and icon
+  // Toggle on click
   nightToggle.addEventListener('click', () => {
     const isNightNow = document.body.classList.toggle('night');
     localStorage.setItem('nightMode', isNightNow);
-    nightIcon.src = isNightNow ? 'icon/matahari.svg' : 'icon/bulan.svg';
+    nightIcon.src = isNightNow ? 'icons/sun.svg' : 'icons/moon.svg';
     nightIcon.alt = isNightNow ? 'Light mode' : 'Dark mode';
   });
 });
