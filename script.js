@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // pemula tema
   if (isNight) {
     document.body.classList.add('night');
-    nightIcon.src = 'icons/sun.svg';
+    nightIcon.src = 'icon/matahari.svg';
     nightIcon.alt = 'Light mode';
   } else {
     document.body.classList.remove('night');
-    nightIcon.src = 'icons/moon.svg';
+    nightIcon.src = 'icon/bulan.svg';
     nightIcon.alt = 'Dark mode';
   }
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   nightToggle.addEventListener('click', () => {
     const isNightNow = document.body.classList.toggle('night');
     localStorage.setItem('nightMode', isNightNow);
-    nightIcon.src = isNightNow ? 'icons/sun.svg' : 'icons/moon.svg';
+    nightIcon.src = isNightNow ? 'icon/matahari.svg' : 'icon/bulan.svg';
     nightIcon.alt = isNightNow ? 'Light mode' : 'Dark mode';
   });
 });
