@@ -1,11 +1,11 @@
 [
     {
-    "fileHash": "bb89ff9a5288372bd40486d9d61b0902ddb55d663ce05f98c6663c34c0a4144d",
+    "file": "/sastra/adrenalin.txt",
     "title": "Azmen Melaju Tiba-tiba",
-    "passwordHash": "2b22197051419a2d029241899de325651bb6fca85f9414d76591fc815a220f4c"
+    "password": "adrenalin"
   },
     {
-    "fileHash": "b5f22a67dfa17a87684ac6c2e87dbd6466497afbff25d64aa0e996576a94de22",
+    "file": "/post/bank-in.txt",
     "title": "demi sastra",
   }
 ]
