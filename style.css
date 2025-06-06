@@ -37,7 +37,7 @@ html, body {
 }
 
 body.night {
-  background: #121212;
+  background: black;
   color: #eee;
 }
 #night-toggle {
@@ -150,7 +150,18 @@ a:hover {
     font-size: 20px;
   }
 }
-
 body.night #post-content {
-  background: #222;
+  background: black;
+  color: #eee;
 }
+
+body.night #site-name-top,
+body.night #site-name-top a {
+  color: #eee;
+}
+
+#post-content, #site-name-top  {
+  transition: background 1.5s, color 1.5s;
+}
+}
+
