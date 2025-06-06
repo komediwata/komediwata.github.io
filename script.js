@@ -67,12 +67,12 @@ window.addEventListener('DOMContentLoaded', () => {
           .then(posts => {
             const post = posts.find(p => p.fileHash === fileHash);
             if (!post) {
-              alert('File not found or removed.');
+              alert('takde atau telah dipadam');
               return;
             }
             loadPost(post, filename);
           })
-          .catch(() => alert('Error loading config.'));
+          .catch(() => alert('jap ada bug'));
       });
     } else {
       bio.style.display = 'block';
