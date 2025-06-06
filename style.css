@@ -134,20 +134,20 @@ a:hover {
 
 #night-toggle {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  top: 40rem;
+  right: 1.5rem;
   background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
   color: inherit;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 /* Optional: Make slightly bigger on small screens */
 @media (max-width: 768px) {
   #night-toggle {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 
