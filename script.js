@@ -6,17 +6,13 @@ window.addEventListener('DOMContentLoaded', () => {
   const postContent = document.getElementById('post-content');
   const bio = document.getElementById('bio');
 
+  // SHA-256 function
   function sha256(text) {
     return crypto.subtle.digest("SHA-256", new TextEncoder().encode(text))
       .then(buf => [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join(''));
   }
 
-  function base64Encode(text) {
-    return btoa(text);
-  }
-
   function loadPost(post, filename) {
-    // Ask for password and verify
     if (post.passwordHash) {
       const input = prompt("Enter password:");
       sha256(input).then(hash => {
@@ -65,29 +61,25 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     if (folder && filename) {
-      const fileEncoded = base64Encode(filename);
-      fetch('config.json')
-        .then(res => res.json())
-        .then(posts => {
-          const post = posts.find(p => p.fileHash === fileEncoded);
-          if (!post) {
-            alert('File not found or removed.');
-            return;
-          }
-          loadPost(post, filename);
-        })
-        .catch(() => alert('Error loading config.'));
+      sha256(filename).then(fileHash => {
+        fetch('config.json')
+          .then(res => res.json())
+          .then(posts => {
+            const post = posts.find(p => p.fileHash === fileHash);
+            if (!post) {
+              alert('File not found or removed.');
+              return;
+            }
+            loadPost(post, filename);
+          })
+          .catch(() => alert('Error loading config.'));
+      });
     } else {
       bio.style.display = 'block';
       postContent.style.display = 'none';
     }
   }
 
-  handleHash();
-  window.addEventListener('hashchange', handleHash);
-});
-
-  // Run once and on hash change
   handleHash();
   window.addEventListener('hashchange', handleHash);
 });
