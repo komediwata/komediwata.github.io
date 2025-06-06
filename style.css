@@ -132,7 +132,24 @@ a:hover {
   } 
 } 
 
+#night-toggle {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: inherit;
+  z-index: 1000;
+}
 
+/* Optional: Make slightly bigger on small screens */
+@media (max-width: 768px) {
+  #night-toggle {
+    font-size: 28px;
+  }
+}
 
 body.night #post-content {
   background: #222;
