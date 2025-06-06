@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const postContent = document.getElementById('post-content');
   const bio = document.getElementById('bio');
 
-  // SHA-256 function
+  // SHA-256 hashing function
   function sha256(text) {
     return crypto.subtle.digest("SHA-256", new TextEncoder().encode(text))
       .then(buf => [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join(''));
@@ -18,6 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
       sha256(input).then(hash => {
         if (hash !== post.passwordHash) {
           alert("Wrong password.");
+          bio.style.display = 'block';
+          postContent.style.display = 'none';
           return;
         }
         fetchPost(filename, post.title);
@@ -28,7 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   function fetchPost(filename, title) {
-    fetch(`/post/${filename}`)
+    // Fetch post file relative to current directory (adjust if needed)
+    fetch(`post/${filename}`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to load post.');
         return res.text();
@@ -49,6 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function handleHash() {
     const hash = window.location.hash;
+    console.log('Current hash:', hash);
     let folder = null;
     let filename = null;
 
@@ -61,18 +65,26 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     if (folder && filename) {
+      console.log('Looking for fileHash of:', filename);
       sha256(filename).then(fileHash => {
+        console.log('Computed fileHash:', fileHash);
         fetch('config.json')
           .then(res => res.json())
           .then(posts => {
             const post = posts.find(p => p.fileHash === fileHash);
             if (!post) {
-              alert('takde atau telah dipadam');
+              alert('memang takde atau dipadam');
+              bio.style.display = 'block';
+              postContent.style.display = 'none';
               return;
             }
             loadPost(post, filename);
           })
-          .catch(() => alert('jap ada bug'));
+          .catch(() => {
+            alert('jap ada bug');
+            bio.style.display = 'block';
+            postContent.style.display = 'none';
+          });
       });
     } else {
       bio.style.display = 'block';
@@ -80,6 +92,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Initial load and listen for hash changes
   handleHash();
   window.addEventListener('hashchange', handleHash);
 });
