@@ -26,6 +26,7 @@ html, body {
   background: white;
   color: black;
   line-height: 1.4;
+  overflow: auto;
   scrollbar-width: none;
 }
 
