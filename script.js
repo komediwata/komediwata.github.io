@@ -1,6 +1,22 @@
-//window.toggleNight = function() {
-  //document.body.classList.toggle('night');
-//};
+document.addEventListener('DOMContentLoaded', () => {
+  const nightToggle = document.getElementById('night-toggle');
+
+  // Set initial state from localStorage
+  const isNight = localStorage.getItem('nightMode') === 'true';
+  if (isNight) {
+    document.body.classList.add('night');
+    nightToggle.textContent = '☀️';
+  } else {
+    nightToggle.textContent = '🌙';
+  }
+
+  // Toggle theme and icon
+  nightToggle.addEventListener('click', () => {
+    const isNightNow = document.body.classList.toggle('night');
+    localStorage.setItem('nightMode', isNightNow);
+    nightToggle.textContent = isNightNow ? '☀️' : '🌙';
+  });
+});
 
 window.addEventListener('DOMContentLoaded', () => {
   const postContent = document.getElementById('post-content');
