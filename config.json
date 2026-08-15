@@ -171,5 +171,10 @@
     "file": "/post/info.txt",
     "title": "demi sastra",
     "password": null
+  },
+{
+    "file": "/sastra/kucing-tewas.txt",
+    "title": "kucing tewas",
+    "password": null
   }
 ]
